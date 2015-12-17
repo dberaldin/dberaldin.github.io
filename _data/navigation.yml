@@ -1,0 +1,19 @@
+- title: "Home"
+  href: "/"
+
+- title: "Chapter 11"
+  href: "/pages/chapter11/"
+  subpages:
+    - title: "Section 1.1"
+      href: "/pages/section11/"
+      subpages:
+        - title: "Subsection 1.1.1"
+          href: "/pages/subsection111/"
+        - title: "Subsection 1.1.2"
+          href: "/pages/subsection112/"
+    - title: "Section 1.2"
+      href: "/pages/section12/"
+
+- title: "Chapter 12"
+  href: "/pages/chapter12/"
+

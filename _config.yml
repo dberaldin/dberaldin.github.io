@@ -1,0 +1,23 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+gems:             [jekyll-gist]
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Book
+tagline:          'An example book'
+description:      'This is a test'
+url:              http://example.com
+baseurl:          /
+
+author:
+  name:           'DB'
+
+# Custom vars
+version:          0.0.1
+
+github:
+  repo:           https://github.com/dberaldin.github.io
