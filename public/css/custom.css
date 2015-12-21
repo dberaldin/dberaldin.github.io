@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Contents
  *
@@ -127,111 +128,137 @@ a.sidebar-nav-item:focus {
     margin-right: 4rem;
   }
 }
+=======
+>>>>>>> 1162c3de3626cd932376ce0b067471435284f01d
 
+ #wrapper {
+     padding-left: 0;
+     -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+     transition: all 0.5s ease;
+ }
 
-/*
- * Reverse layout
- *
- * Flip the orientation of the page by placing the `.sidebar` on the right.
- */
+ #wrapper.toggled {
+     padding-left: 250px;
+ }
 
-@media (min-width: 48em) {
-  .layout-reverse .sidebar {
-    left: auto;
-    right: 0;
+ #sidebar-wrapper {
+     z-index: 1000;
+     position: fixed;
+     top: 160px;
+     left: 250px;
+     width: 0;
+     height: 100%;
+     margin-left: -250px;
+     overflow-y: auto;
+     -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+     transition: all 0.5s ease;
+ }
+
+ #wrapper.toggled #sidebar-wrapper {
+     width: 250px;
+ }
+
+ #page-content-wrapper {
+     width: 100%;
+     position: absolute;
+     padding: 15px;
+ }
+
+ #wrapper.toggled #page-content-wrapper {
+     position: absolute;
+     margin-right: -250px;
+ }
+
+ /* Sidebar Styles */
+ .sidebar-nav {
+     position: absolute;
+     top: 0;
+     width: 250px;
+     margin: 0;
+     padding: 0;
+     list-style: none;
+ }
+
+ .sidebar-nav ul {
+     margin: 0;
+     padding-left: 1em;
+     list-style: none;
+ }
+
+ .sidebar-nav li {
+     text-indent: 20px;
+     line-height: 40px;
+ }
+
+ .sidebar-nav li a {
+     display: block;
+     text-decoration: none;
+     color: #333;
+ }
+
+  .sidebar-nav li .active {
+      color: #eb5137;
   }
-  .layout-reverse .content {
-    margin-left: 2rem;
-    margin-right: 20rem;
-  }
-}
 
-@media (min-width: 64em) {
-  .layout-reverse .content {
-    margin-left: 4rem;
-    margin-right: 22rem;
-  }
-}
+ .sidebar-nav li a:hover {
+     text-decoration: none;
+     color: #eb5137;
+ }
 
+ .sidebar-nav li a:active,
+ .sidebar-nav li a:focus {
+     text-decoration: none;
+     color: #eb5137;
+ }
 
+ .sidebar-nav > .sidebar-brand {
+     height: 65px;
+     font-size: 1.5em;
+     font-weight: 500;
+     line-height: 60px;
+ }
 
-/*
- * Themes
- *
- * As of v1.1, Hyde includes optional themes to color the sidebar and links
- * within blog posts. To use, add the class of your choosing to the `body`.
- */
+ .sidebar-nav > .sidebar-brand a {
+     color: #000;
+ }
 
-/* Base16 (http://chriskempson.github.io/base16/#default) */
+ .sidebar-nav > .sidebar-brand a:hover {
+     color: #eb5137;
+     background: none;
+ }
 
-/* Red */
-.theme-base-08 .sidebar {
-  background-color: #ac4142;
-}
-.theme-base-08 .content a,
-.theme-base-08 .related-posts li a:hover {
-  color: #ac4142;
-}
+ @media(min-width:768px) {
+     #wrapper {
+         padding-left: 250px;
+     }
 
-/* Orange */
-.theme-base-09 .sidebar {
-  background-color: #d28445;
-}
-.theme-base-09 .content a,
-.theme-base-09 .related-posts li a:hover {
-  color: #d28445;
-}
+     #wrapper.toggled {
+         padding-left: 0;
+     }
 
-/* Yellow */
-.theme-base-0a .sidebar {
-  background-color: #f4bf75;
-}
-.theme-base-0a .content a,
-.theme-base-0a .related-posts li a:hover {
-  color: #f4bf75;
-}
+     #sidebar-wrapper {
+         width: 250px;
+     }
 
-/* Green */
-.theme-base-0b .sidebar {
-  background-color: #90a959;
-}
-.theme-base-0b .content a,
-.theme-base-0b .related-posts li a:hover {
-  color: #90a959;
-}
+     #wrapper.toggled #sidebar-wrapper {
+         width: 0;
+     }
 
-/* Cyan */
-.theme-base-0c .sidebar {
-  background-color: #75b5aa;
-}
-.theme-base-0c .content a,
-.theme-base-0c .related-posts li a:hover {
-  color: #75b5aa;
-}
+     #page-content-wrapper {
+         padding: 20px;
+         position: relative;
+     }
 
-/* Blue */
-.theme-base-0d .sidebar {
-  background-color: #6a9fb5;
-}
-.theme-base-0d .content a,
-.theme-base-0d .related-posts li a:hover {
-  color: #6a9fb5;
-}
+     #wrapper.toggled #page-content-wrapper {
+         position: relative;
+         margin-right: 0;
+     }
+ }
 
-/* Magenta */
-.theme-base-0e .sidebar {
-  background-color: #aa759f;
-}
-.theme-base-0e .content a,
-.theme-base-0e .related-posts li a:hover {
-  color: #aa759f;
-}
-
-/* Brown */
-.theme-base-0f .sidebar {
-  background-color: #8f5536;
-}
-.theme-base-0f .content a,
-.theme-base-0f .related-posts li a:hover {
-  color: #8f5536;
+header .container {
+    width: 95%;
 }
