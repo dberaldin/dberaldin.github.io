@@ -7,10 +7,10 @@
   <body>
     <!-- Header taken from the website -->
     {% include header.html %}
-    <!-- Side menu -->
-    {% include sidebar.html %}
+    <div id="wrapper">
+      <!-- Side menu -->
+      {% include sidebar.html %}
       
-    <div class="content container">
       <!-- Include sublayout -->
       {{ content }}
     </div>
