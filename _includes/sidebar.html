@@ -19,15 +19,7 @@
 
         {% for p in site.data.navigation %}
 
-            {% capture childrenurls %}
-            {{p.href}},
-            {% for sp in p.subpages %}
-                {{sp.href}},
-                {% for ssp in sp.subpages %}
-                    {{ssp.href}},
-                {% endfor %}
-            {% endfor %}
-            {% endcapture %}
+            {% capture childrenurls %}{{ p.href }},{% for sp in p.subpages %}{{ sp.href }},{% for ssp in sp.subpages %}{{ ssp.href }},{% endfor %}{% endfor %}{% endcapture %}
 
             {% if p.subpages != null and childrenurls contains page.url and page.url != site.baseurl %}
             <li>
@@ -35,14 +27,10 @@
                 <ul>
                     {% for sp in p.subpages %}
 
-                        {% capture childrenurls %}
-                        {{sp.href}},
-                        {% for ssp in sp.subpages %}
-                            {{ssp.href}},
-                        {% endfor %}
-                        {% endcapture %}
+                        {% capture childrenurls %}{{sp.href}},{% for ssp in sp.subpages %}{{ssp.href}},{% endfor %}{% endcapture %}
 
                         {% if sp.subpages != null and childrenurls contains page.url %}
+
                         <li>
                             <a href="{{ sp.href }}" class="{% if page.url == sp.href %}active{% endif %}">{{ sp.title }}</a>
                             <ul>

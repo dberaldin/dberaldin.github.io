@@ -1,18 +1,24 @@
 - title: "Documentation"
   href: "/"
 
-- title: "Chapter 11"
-  href: "/pages/chapter11/"
-  subpages:
-    - title: "Section 1.1"
-      href: "/pages/section11/"
-      subpages:
-        - title: "Subsection 1.1.1"
-          href: "/pages/subsection111/"
-        - title: "Subsection 1.1.2"
-          href: "/pages/subsection112/"
-    - title: "Section 1.2"
-      href: "/pages/section12/"
+- title: "Introduction"
+  href: "/pages/Introduction/"
 
-- title: "Chapter 12"
-  href: "/pages/chapter12/"
+- title: "1 Getting Started"
+  href: "/pages/Tutorial-Introduction-to-the-NoSQL-world/"
+  subpages:
+      - title: "1.1 Installation"
+        href: "/pages/Tutorial-Installation/"
+        subpages:
+            - title: "1.1.1 Install as Service on Unix/Linux"
+              href: "/pages/Unix-Service/"
+            - title: "1.1.2 Install as a Service on Windows"
+              href: "/pages/Windows-Service/"
+            - title: "1.1.3 Installing in a Docker Container"
+              href: "/pages/Docker-Home/"
+      - title: "1.2 Run the server"
+        href: "/pages/Tutorial-Run-the-server/"
+      - title: "1.3 Run the console"
+        href: "/pages/Tutorial-Run-the-console/"
+      - title: "1.4 Run Studio"
+        href: "/pages/Home-page/"
