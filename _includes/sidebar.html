@@ -10,7 +10,6 @@
   {% endif %}
 {% endfor %}
 <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
-<a class="sidebar-nav-item" href="{{ site.github.repo }}">View documentation on GitHub</a>
 <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
 
 {% endcomment%}
@@ -32,7 +31,7 @@
 
             {% if p.subpages != null and childrenurls contains page.url and page.url != site.baseurl %}
             <li>
-                <a href="{{p.href}}" class="{% if page.url == p.href %}active{% endif %}">{{ p.title }}</a>
+                <a href="{{p.href}}" class="{% if page.url == p.href %}active{% endif %} {%if p.href == "/" %}sidebar-brand{% endif%}">{{ p.title }}</a>
                 <ul>
                     {% for sp in p.subpages %}
 
@@ -62,10 +61,14 @@
             </li>
             {% else %}
             <li>
-                <a href="{{p.href}}" class="{% if page.url == p.href %}active{% endif %}">{{ p.title }}</a>
+                <a href="{{p.href}}" class="{% if page.url == p.href %}active{% endif %} {%if p.href == "/" %}sidebar-brand{% endif%}">{{ p.title }}</a>
             </li>
             {% endif %}
 
         {% endfor %}
     </ul>
+
+    <div class="sidebar-backmatter">
+        <a href="{{ site.github.repo }}"><i class="fa fa-share-square-o"></i> View on GitHub</a>
+    </div>
 </div>

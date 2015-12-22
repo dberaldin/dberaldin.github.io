@@ -13,12 +13,13 @@
 
  #sidebar-wrapper {
      z-index: 1000;
-     position: fixed;
-     top: 160px;
-     left: 250px;
-     width: 0;
+     /*position: fixed;*/
+     /*top: 160px;*/
+     /*left: 250px;*/
+     /*width: 0;*/
      height: 100%;
      margin-left: -250px;
+     float: left;
      overflow-y: auto;
      -webkit-transition: all 0.5s ease;
      -moz-transition: all 0.5s ease;
@@ -43,8 +44,6 @@
 
  /* Sidebar Styles */
  .sidebar-nav {
-     /*position: absolute;*/
-     /*top: 0;*/
      width: 250px;
      margin: 0;
      padding: 0;
@@ -83,21 +82,12 @@
      color: #eb5137;
  }
 
- .sidebar-nav > .sidebar-brand {
-     height: 65px;
-     font-size: 1.5em;
-     font-weight: 500;
-     line-height: 60px;
- }
-
- .sidebar-nav > .sidebar-brand a {
+.sidebar-brand {
      color: #000;
+     font-weight: 500;
+     font-size: 1.5em;
  }
 
- .sidebar-nav > .sidebar-brand a:hover {
-     color: #eb5137;
-     background: none;
- }
 
  @media(min-width:768px) {
      #wrapper {
@@ -127,10 +117,20 @@
      }
  }
 
+  .sidebar-backmatter {
+      padding-top: 3em;
+  }
+
+  .sidebar-backmatter a {
+      color: #999;
+      padding-left: 1em;
+  }
+
 header .container {
     width: 95%;
 }
 
 footer {
+    clear: both;
     background-color: #fff;
 }
